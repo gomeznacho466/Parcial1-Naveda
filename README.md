@@ -67,7 +67,7 @@ El propósito es aplicar buenas prácticas de programación Java mediante:
 - Manejo de excepciones y recursos.
 - Uso de Gradle como sistema de construcción.
 
-## 🧩 Funcionalidades
+
 
 ## 🔁 Funcionalidades del Sistema
 
