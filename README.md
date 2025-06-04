@@ -57,15 +57,26 @@ Editar
 - `persona_id` (clave foránea hacia `Persona`)
 
 ---
+# 🎯 Objetivo del Proyecto
+
+El propósito es aplicar buenas prácticas de programación Java mediante:
+
+- Separación en capas (modelo, DAO, servicio y vista de consola).
+- Uso de JDBC y base de datos relacional H2.
+- Implementación del patrón DAO con interfaces y clases concretas.
+- Manejo de excepciones y recursos.
+- Uso de Gradle como sistema de construcción.
 
 ## 🧩 Funcionalidades
 
-### CRUD para Persona:
-- Crear persona
-- Listar personas
-- Buscar por ID
-- Actualizar nombre
-- Eliminar
+## 🔁 Funcionalidades del Sistema
+
+### CRUD de Persona
+- Crear nueva persona
+- Listar todas las personas
+- Buscar persona por ID
+- Actualizar nombre de persona
+- Eliminar persona
 
 ### CRUD para Direccion:
 - Crear dirección asociada a persona
@@ -76,16 +87,19 @@ Editar
 
 ---
 
-## ⚙️ Configuración de la Base de Datos
+## 🧩 Base de Datos
 
-Se utiliza H2 en **modo archivo**, y los datos se almacenan en la carpeta `./datos` del proyecto.
+- Motor: **H2**
+- Modo: **Archivo**
+- Ruta: `./datos/personas_db.mv.db` (dentro del proyecto)
+- Usuario: `sa`
+- Contraseña: *(vacía)*
 
-**Ruta de conexión:**
+Ejemplo de conexión en `ConexionBD.java`:
 ```java
-jdbc:h2:./datos/personas_db
-📎 Requisitos
-Java JDK 17 o superior
-
+private static final String URL = "jdbc:h2:./datos/personas_db";
+private static final String USER = "sa";
+private static final String PASSWORD = "";
 Gradle instalado o wrapper (./gradlew)
 
 Permisos de escritura en la carpeta del proyecto
